@@ -1,0 +1,61 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav.page-nav {
+    height: 50px;
+    border-bottom: 1px solid #0293a2;
+}
+
+nav.page-nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.page-nav ul {
+    list-style: none;
+}
+
+.page-nav ul li {
+    color: #00f0ff;
+    float: left;
+    margin: 0 0 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.page-nav ul li a {
+    color: #00f0ff;
+}
+
+.page-nav ul.menu .glyphicon {
+    vertical-align: middle;
+    font-size: 12px;
+    transform: scale(0.9, 0.9);
+}
+
+.page-nav ul.menu {
+    float: left;
+    width: 85%;
+}
+
+.page-nav ul.opts {
+    float: right;
+    width: 15%;
+}
+
+.page-nav ul.opts li {
+    margin: 0 15px 0 0;
+    float: right;
+}
+
+
