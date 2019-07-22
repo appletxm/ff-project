@@ -1,0 +1,52 @@
+.login-wrapper {
+    background: transparent url(../assets/images/login_bg.jpg) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.login-panel {
+    width: 540px;
+    height: 320px;
+    background: transparent url(../assets/images/logi_panel_bg.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -160px -270px;
+}
+
+.login-panel h1 {
+    position: absolute;
+    top: -60px;
+    width: 100%;
+    text-align: center;
+    color: #00f0ff;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.login-panel label {
+    display: block;
+    margin-bottom: 30px;
+    height: 38px;
+    position: relative;
+}
+
+.login-panel label input {
+    border: 1px solid #43f5ff;
+    box-shadow: 0 0 0 #43f5ff, inset 0 0 5px #43f5ff;
+    background-color: transparent;
+    line-height: 38px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.login-panel label button {
+    line-height: 38px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-panel .input-content {
+    margin: 70px 40px;
+}
