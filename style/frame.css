@@ -12,50 +12,151 @@ footer {
 nav.page-nav {
     height: 50px;
     border-bottom: 1px solid #0293a2;
+    position: relative;
+    z-index: 1;
 }
-
 nav.page-nav::after {
     content: "";
     display: block;
     clear: both;
 }
-
 .page-nav ul {
     list-style: none;
 }
-
 .page-nav ul li {
     color: #00f0ff;
     float: left;
-    margin: 0 0 0 15px;
+    padding: 0 8px;
     line-height: 50px;
     font-size: 14px;
     cursor: pointer;
 }
-
 .page-nav ul li a {
     color: #00f0ff;
+    text-decoration: none;
+    display: block;
 }
-
 .page-nav ul.menu .glyphicon {
     vertical-align: middle;
     font-size: 12px;
     transform: scale(0.9, 0.9);
 }
-
 .page-nav ul.menu {
     float: left;
     width: 85%;
 }
-
+.page-nav ul.menu li {
+    position: relative;
+}
+.page-nav ul.menu li:hover {
+    background-color: #024a5d;
+}
+.page-nav ul.menu li:hover ul.sub {
+    display: block;
+}
+.page-nav ul.sub {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 150px;
+    border: 1px solid #0293a2;
+    border-top: 0;
+    background-color: #022034;
+    box-shadow: 0 0 5px rgba(255,255,255,0.1), inset 0 0 5px rgba(58, 245, 255, 0.5);
+    display: none;
+}
+.page-nav ul.sub li {
+    margin: 0;
+    display: block;
+    float: none;
+    line-height: 36px;
+    border-bottom: 1px solid #0293a2;
+    padding: 0 4px;
+    background-color: #012034;
+}
+.page-nav ul.sub li:last-child {
+    border-bottom: 0;
+}
+.page-nav ul.sub li:hover {
+    background-color: #024a5d;
+}
 .page-nav ul.opts {
     float: right;
     width: 15%;
 }
 
 .page-nav ul.opts li {
-    margin: 0 15px 0 0;
     float: right;
+}
+
+.main-frame {
+    position: absolute;
+    border: 1px solid #3af5ff;
+    box-shadow: 0 0 0 #3af5ff, inset 0 0 5px rgba(58, 245, 255, 0.5);
+    top: 70px;
+    bottom: 40px;
+    right: 30px;
+    left: 30px;
+}
+.main-frame .corner {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background: transparent url(../assets/images/corner-big.png) no-repeat;
+}
+.main-frame .corner.c-t-l {
+    background-position: 0 0;
+    top: -2px;
+    left: -2px;
+}
+.main-frame .corner.c-t-r {
+    background-position: -44px 0;
+    top: -2px;
+    right: -2px;
+}
+.main-frame .corner.c-b-l {
+    background-position: -88px 0;
+    bottom: -12px;
+    left: -2px;
+}
+.main-frame .corner.c-b-r {
+    background-position: -132px 0;
+    bottom: -12px;
+    right: -2px;
+}
+
+.main-frame header {
+    display: block;
+    height: 54px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-frame header span {
+    display: inline-block;
+    line-height: 46px;
+    height: 54px;
+    position: relative;
+    min-width: 400px;
+    color: #00f0ff;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent url(../assets/images/list-header-bg.png) 0 -54px repeat-x;
+    top: -1px;
+}
+
+.main-frame header span::before, .main-frame header span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: transparent url(../assets/images/list-header-bg.png) no-repeat;
+    width: 58px;
+}
+.main-frame header span::after  {
+    background-position: -58px 0;
+    right: 0;
 }
 
 
