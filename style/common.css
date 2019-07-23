@@ -28,15 +28,17 @@ body {
 .btn {
     border: 0;
 }
-.btn-default {
+.btn-primary {
     background-color: #00f0ff;
     color: #010912;
 }
-.btn-default:hover {
+.btn-primary:hover {
     background-color: #16d4e0;
+    color: #010912;
 }
-.btn-default:focus {
+.btn-primary:focus {
     background-color: #00bbc7;
+    color: #010912;
 }
 
 input {
