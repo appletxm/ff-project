@@ -92,38 +92,37 @@
             <span>CM查询</span>
         </header>
 
-        <div class="row">
-            <div class="col-md-2">
-                <label class="input-group">
-                    <span class="input-group-addon glyphicon glyphicon-search"></span>
-                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                </label>
-            </div>
-            <div class="col-md-2">
+        <div class="search-form rows">
+            <label class="input-group col-md-2">
+                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                <input type="text" class="form-control group" placeholder="Username" aria-describedby="basic-addon1">
+            </label>
+            <label class="input-group col-md-2">
                 <input type="text" class="form-control" placeholder="Username">
-            </div>
-            <div class="col-md-1">
+            </label>
+            <label class="input-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="slectedContnet">没有选择中任何项</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="display: none;">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+            </label>
+            <label class="input-group">
                 <button class="btn btn-primary">查询ALL</button>
-            </div>
-            <div class="col-md-1">
+            </label>
+            <label class="input-group">
                 <button class="btn btn-default">查询Now</button>
-            </div>
-            <div class="col-md-2">
-                <label class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                    <button type="button" class="btn btn-default">Left</button>
-                    <button type="button" class="btn btn-default">Right</button>
-                </label>
-            </div>
-        </div>
-
-        <!-- <div class="form-group">
-            <label class="input-group"><button class="btn btn-primary">查询ALL</button></label>
-            <label class="input-group"><button class="btn btn-default">查询Now</button></label>
+            </label>
             <label class="btn-group btn-group-lg" role="group" aria-label="Large button group">
                 <button type="button" class="btn btn-default">Left</button>
                 <button type="button" class="btn btn-default">Right</button>
             </label>
-        </div> -->
+        </div>
 
         <div class="grid-data">
             <table class="table">
@@ -162,6 +161,33 @@
     <footer>
         @2019珠海广电技术规划管理室
     </footer>
+
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        (function(win, doc){
+            function addEventListener() {
+                let dropDown = $('button.dropdown-toggle')
+                dropDown.on('click', function(e) {
+                    debugger
+                    let menu = $(e.currentTarget).siblings('ul')
+                    menu.get(0).style.display = 'block'
+                    e.stopPropagation()
+                })
+            }
+
+            function init() {
+                addEventListener()
+            }
+
+            doc.addEventListener('click', function() {
+                $('.dropdown-menu').get(0).style.display = 'none'
+            })
+
+            doc.addEventListener('DOMContentLoaded', function() {
+                init()
+            })
+        })(window, document)
+    </script>
 </body>
 
 </html>

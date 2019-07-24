@@ -27,40 +27,97 @@ body {
 
 .btn {
     border: 0;
+    border-radius: 0;
+    font-weight: normal;
+    font-size: 14px !important;
 }
 .btn-primary {
     background-color: #00f0ff;
     color: #010912;
+    border: 1px solid #00f0ff;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus{
+    border: 1px solid #00f0ff;
     background-color: #16d4e0;
     color: #010912;
 }
-.btn-primary:focus {
-    background-color: #00bbc7;
-    color: #010912;
+.btn-default {
+    border: 1px solid #00f0ff;
+    box-shadow: inset 0 0 5px rgba(45, 82, 98);
+    background-color: transparent;
+    color: #00bbc7;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+    border: 1px solid #00f0ff;
+    box-shadow: inset 0 0 10px rgba(45, 82, 98);
+    background-color: transparent;
+    color: #00bbc7;
+}
+.btn-group button {
+    min-width: 80px;
+    text-align: center;
 }
 
-input {
+input, .form-control {
     background-color: #022034;
     border: 1px solid #43f5ff;
     background-color: transparent;
-    line-height: 38px;
     color: #43f5ff;
     transition: all 0.5s ease-in-out;
+    border-radius: 0;
+    font-weight: normal;
+    font-size: 14px !important;
+    line-height: 34px;
+    padding: 0 10px;
 }
-input:focus {
+.form-control.group {
+    border-left: 0;
+}
+input:focus, .form-control:focus {
     box-shadow: 0 0 0 #43f5ff, inset 0 0 5px #43f5ff;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
-    color: rgba(0, 240, 255, 0.4);
+    color: rgba(0, 240, 255, 0.4) !important;
 }
 ::-moz-placeholder { /* Firefox 19+ */  
-    color: rgba(0, 240, 255, 0.4);
+    color: rgba(0, 240, 255, 0.4) !important;
 }
 :-ms-input-placeholder { /* IE 10+ */ 
-    color: rgba(0, 240, 255, 0.4);
+    color: rgba(0, 240, 255, 0.4) !important;
 }
 :-moz-placeholder { /* Firefox 18- */ 
-    color: rgba(0, 240, 255, 0.4);
+    color: rgba(0, 240, 255, 0.4) !important;
+}
+
+.dropdown-menu::before {
+    content: "";
+    width: 8px;
+    height: 7px;
+    background: url(../assets/images/drowndown-gap.jpg) no-repeat;
+    position: absolute;
+    top: -7px;
+    left: 3px;
+}
+.dropdown-menu {
+    border: 1px solid #00f0fd;
+    box-shadow: inset 0 0 10px rgba(69, 109, 121, 1);
+    background-color: #012034;
+    border-radius: 0;
+    top: 40px;
+    min-width: 100%;
+    padding: 0;
+    display: none;
+}
+.dropdown-menu li {
+    font-size: 14px;
+    color: #00f0fd;
+}
+.dropdown-menu li a:hover{
+    background-color: #034a5c;
+    color: #00f0fd;
+}
+.dropdown-menu li a{
+    display: block;
+    padding: 8px 10px;
+    color: #00f0fd;
 }

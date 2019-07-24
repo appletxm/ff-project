@@ -13,7 +13,7 @@ nav.page-nav {
     height: 50px;
     border-bottom: 1px solid #0293a2;
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 nav.page-nav::after {
     content: "";
@@ -71,7 +71,7 @@ nav.page-nav::after {
     float: none;
     line-height: 36px;
     border-bottom: 1px solid #0293a2;
-    padding: 0 4px;
+    padding: 0 5px;
     background-color: #012034;
 }
 .page-nav ul.sub li:last-child {
@@ -131,7 +131,6 @@ nav.page-nav::after {
     width: 100%;
     text-align: center;
 }
-
 .main-frame header span {
     display: inline-block;
     line-height: 46px;
@@ -144,7 +143,6 @@ nav.page-nav::after {
     background: transparent url(../assets/images/list-header-bg.png) 0 -54px repeat-x;
     top: -1px;
 }
-
 .main-frame header span::before, .main-frame header span::after {
     display: block;
     content: "";
@@ -159,4 +157,35 @@ nav.page-nav::after {
     right: 0;
 }
 
-
+.search-form {
+    padding: 20px 10px;
+}
+.search-form::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.search-form label.input-group, .search-form label.btn-group {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+label.input-group .input-group-addon {
+    top: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border-color: #00f0ff;
+    color: #00f0ff;
+}
+.search-form .btn-default:focus, .search-form .btn-default:active  {
+    background-color: transparent;
+    color: #00bbc7;
+}
+.search-form .btn-group button {
+    height: 34px;
+    border-radius: 0;
+    line-height: 34px;
+    border-radius: 0;
+    padding: 0 10px;
+    font-size: 14px;
+}
