@@ -95,21 +95,22 @@
         <div class="search-form rows">
             <label class="input-group col-md-2">
                 <span class="input-group-addon glyphicon glyphicon-search"></span>
-                <input type="text" class="form-control group" placeholder="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control group" placeholder="搜索" aria-describedby="basic-addon1">
             </label>
             <label class="input-group col-md-2">
-                <input type="text" class="form-control" placeholder="Username">
+                <input type="text" class="form-control" placeholder="输入CM完整的MAC地址">
             </label>
             <label class="input-group dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="slectedContnet">没有选择中任何项</span>
-                  <span class="caret"></span>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                    <span class="slectedContnet">没有选择中任何项</span>
+                    <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="display: none;">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li><a href="#">Separated link</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
                 </ul>
             </label>
             <label class="input-group">
@@ -119,8 +120,29 @@
                 <button class="btn btn-default">查询Now</button>
             </label>
             <label class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                <button type="button" class="btn btn-default">Left</button>
-                <button type="button" class="btn btn-default">Right</button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
+            </label>
+            <label class="input-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="slectedContnet glyphicon glyphicon-th-large"></span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="display: none;">
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#">50</a></li>
+                </ul>
+            </label>
+            <label class="input-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="slectedContnet glyphicon glyphicon-export"></span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="display: none;">
+                    <li><a href="#">导出为EXCEL</a></li>
+                    <li><a href="#">导出为另外的文件</a></li>
+                </ul>
             </label>
         </div>
 
@@ -128,33 +150,167 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Node_Id</th>
+                        <th>PRD MAC地址</th>
+                        <th>PRD IP地址</th>
+                        <th>Node_Type</th>
+                        <th>数量</th>
+                        <th>状态</th>
+                        <th>运行状态</th>
+                        <th>板卡插槽号</th>
+                        <th>设备名称</th>
+                        <th>参数类型</th>
+                        <th>设备参数值</th>
+                        <th>设备温度状态</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td>running</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>常温</td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
+                    </tr>
+                    <tr>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
+                    </tr>
+                    <tr>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
+                    </tr>
+                    <tr>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
+                    </tr>
+                    <tr>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
+                    </tr>
+                    <tr>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50/td>
+                        <td>10.20.30.50</td>
+                        <td>10.20.30.50</td>
+                        <td>1</td>
+                        <td>正常</td>
+                        <td class="red">empty</td>
+                        <td>宝源</td>
+                        <td>宝源</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="red">高温</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="pagination-info">
+            <div class="left">
+                <span>显示第 1 条到第 8 条记录，总共 146 条记录 每页显示
+                    <label class="input-group dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="slectedContnet">8</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu3" style="display: none;">
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">20</a></li>
+                            <li><a href="#">50</a></li>
+                        </ul>
+                    </label>
+                    条记录</span>
+            </div>
+            <div class="right">
+                <button class="btn"><span class="glyphicon glyphicon-menu-left"></span></button>
+                <button class="btn selected">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">3</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <span>...</span>
+                <button class="btn">20</button>
+                <button class="btn"><span class="glyphicon glyphicon-menu-right"></span></button>
+            </div>
         </div>
     </section>
 
@@ -164,11 +320,10 @@
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
-        (function(win, doc){
+        (function (win, doc) {
             function addEventListener() {
                 let dropDown = $('button.dropdown-toggle')
-                dropDown.on('click', function(e) {
-                    debugger
+                dropDown.on('click', function (e) {
                     let menu = $(e.currentTarget).siblings('ul')
                     menu.get(0).style.display = 'block'
                     e.stopPropagation()
@@ -179,14 +334,15 @@
                 addEventListener()
             }
 
-            doc.addEventListener('click', function() {
-                $('.dropdown-menu').get(0).style.display = 'none'
+            doc.addEventListener('click', function () {
+                $('.dropdown ul').removeAttr('style')
             })
 
-            doc.addEventListener('DOMContentLoaded', function() {
+            doc.addEventListener('DOMContentLoaded', function () {
                 init()
             })
         })(window, document)
+
     </script>
 </body>
 

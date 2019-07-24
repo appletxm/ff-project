@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Microsoft YaHei", "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -72,6 +73,7 @@ input, .form-control {
 }
 .form-control.group {
     border-left: 0;
+    padding-left: 0;
 }
 input:focus, .form-control:focus {
     box-shadow: 0 0 0 #43f5ff, inset 0 0 5px #43f5ff;
@@ -120,4 +122,8 @@ input:focus, .form-control:focus {
     display: block;
     padding: 8px 10px;
     color: #00f0fd;
+}
+
+.red {
+    color: #fd6760
 }

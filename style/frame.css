@@ -189,3 +189,67 @@ label.input-group .input-group-addon {
     padding: 0 10px;
     font-size: 14px;
 }
+
+.grid-data {
+    margin: 0 20px 20px;
+}
+.grid-data .table thead {
+    color: #9faeb6;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #0f3448;
+    box-shadow: inset 0 0 10px rgba(15, 69, 88);
+}
+.grid-data .table tbody tr:nth-child(even) {
+    background-color: #02283c;
+}
+.grid-data .table tr td, .grid-data .table thead th {
+    border: 0;
+    padding: 12px 8px;
+    color: #9faeb6;
+}
+.grid-data .table tr td{
+    color: #dee2e5;
+}
+
+.pagination-info {
+    margin: 0 20px;
+    line-height: 20px;
+    color: #9aa6ae;
+}
+.pagination-info::after{
+    display: block;
+    content: "";
+    clear: both;
+    width:100%;
+}
+.pagination-info .left {
+    float: left;
+}
+.pagination-info .left button {
+    padding: 2px 10px;
+}
+.pagination-info .left .dropdown-menu {
+    bottom: 25px;
+    top: auto;
+}
+.pagination-info .left .dropdown-menu a {
+    padding: 5px 10px;
+}
+.pagination-info .left label {
+    display: inline-block;
+}
+.pagination-info .right {
+    float: right;
+}
+.pagination-info .right .btn {
+    padding: 2px 10px;
+    background: transparent;
+    border: 1px solid #b8bcbf;
+}
+
+.pagination-info .right .btn:hover, .pagination-info .right .btn.selected {
+    background-color: #00f0ff;
+    border-color: #00f0ff;
+    color: #023c4f;
+}
