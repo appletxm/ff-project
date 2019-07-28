@@ -176,6 +176,7 @@ label.input-group .input-group-addon {
     border-radius: 0;
     border-color: #00f0ff;
     color: #00f0ff;
+    cursor: pointer;
 }
 .search-form .btn-default:focus, .search-form .btn-default:active  {
     background-color: transparent;
@@ -252,4 +253,106 @@ label.input-group .input-group-addon {
     background-color: #00f0ff;
     border-color: #00f0ff;
     color: #023c4f;
+}
+.pagination-info-href {}
+.pagination-info-href .btn {
+    padding: 2px!important;
+    border: 0!important;
+    color: #0bbcc7!important;
+}
+.pagination-info-href .btn:hover {
+    background-color: transparent !important;
+    color: #00f0ff!important;
+}
+.pagination-info-href .btn:disabled {
+    background-color: transparent !important;
+    color: #054773;
+}
+
+.main-frame-frozen {}
+.main-frame-frozen .pagination-info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    margin: 0;
+}
+.main-frame-frozen .grid-data {
+    position: absolute;
+    top: 130px;
+    bottom: 55px;
+    left: 20px;
+    right: 20px;
+    overflow: auto;
+    margin: 0;
+}
+
+.time-line-row {
+    display: block;
+    position: relative;
+    color: #fff;
+    margin-bottom: 0;
+}
+.time-line-row dt {
+    position: absolute;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+    width: 100px;
+    padding-right: 20px;
+}
+.time-line-row dt i{
+    font-style: normal;
+    display: block
+}
+.time-line-row dt span{
+    display: block;
+    color: #00f0ff;
+}
+.time-line-row dt b {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    position: absolute;
+    top: auto;
+    right: -4px;
+    background-color: #fff;
+    z-index: 1;
+}
+.time-line-row dt::before{
+    content: "";
+    display: block;
+    border-right: 1px dashed #677985;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.time-line-row dd {
+    display: block;
+    padding: 0 0 0 120px;
+    font-weight: 300;
+}
+.time-line-row dd span {
+    display: block;
+    padding: 10px;
+    background-color: #02283c;
+}
+.time-line-row dd::after {
+    content: "";
+    display: block;
+    height: 20px;
+    margin:0;
+    padding: 0;
+}
+.time-line-row .time {
+    position: absolute;
+    top: 0;
+}
+
+.time-line-row:last-child dd::after {
+    display: none;
 }

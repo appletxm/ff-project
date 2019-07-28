@@ -10,6 +10,15 @@ body {
     background-color: #012034;
 }
 
+a {
+    color: #00f0ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #07c8d4;
+}
+
 .postion-absolute {
     position: absolute;
     top: 0;

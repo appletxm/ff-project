@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="expires" content="0"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>test css3 and h5 api</title>
+    <link rel="icon" href="assets/images/logo.ico" type="image/png">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <!--tableCss-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap_table/bootstrap-table.css" />
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap_table/bootstrap-table.min.css" />
+    <!--dateCss-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-datetimepicker.min.css" />
+    <!--validatorCss-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrapValidator/bootstrapValidator.css">
+    <!--editableCss-->
+    <link rel="stylesheet" href="assets/bootstrap/x_editable/bootstrap-editable.css">
+    <!--toastrCss-->
+    <link rel="stylesheet" href="assets/bootstrap/toastr/toastr.css">
+    <!--selectCSS-->
+    <link rel="stylesheet" href="assets/bootstrap/select/bootstrap-select.css">
+
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/frame.css" />
+    <link rel="stylesheet" href="stylepage-casa-prd-cm-log.css" />
+</head>
+
+<body>
+    <nav class="page-nav">
+        <ul class="menu">
+            <li title="系统操作"><a>系统操作</a></li>
+            <li title="网警IP落地查询"><a>网警IP落地查询</a></li>
+            <li title="释放IP操作"><a>释放IP操作</a></li>
+            <li title="CM日志查询">
+                CM日志查询 <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <ul class="sub">
+                    <li><a>CM日志查询1</a></li>
+                    <li><a>CM日志查询2</a></li>
+                    <li><a>CM日志查询3</a></li>
+                    <li><a>CM日志查询4</a></li>
+                </ul>
+            </li>
+            <li title="CNR各项实时状态">
+                CNR各项实时状态 <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <ul class="sub">
+                    <li><a>CNR各项实时状态1</a></li>
+                    <li><a>CNR各项实时状态2</a></li>
+                    <li><a>CNR各项实时状态3</a></li>
+                    <li><a>CNR各项实时状态4</a></li>
+                </ul>
+            </li>
+            <li title="地址池相关">
+                地址池相关 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="OLT相关操作">
+                OLT相关操作 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CASA RPD查询">
+                CASA RPD查询 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CNR主机管理与监控">
+                CNR主机管理与监控 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="路由与配置相关">
+                路由与配置相关 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CLASS查询与配置">
+                CLASS查询与配置 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+        </ul>
+
+        <ul class="opts">
+            <li><a><span class="glyphicon glyphicon-log-out"></span></a></li>
+            <li><a><span class="glyphicon glyphicon-cog"></span> 用户管理</a></li>
+            <li><a><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-frame  main-frame-frozen">
+        <p class="corner c-t-l"></p>
+        <p class="corner c-t-r"></p>
+        <p class="corner c-b-l"></p>
+        <p class="corner c-b-r"></p>
+        <header>
+            <span>CM日志上线查询</span>
+        </header>
+
+        <div class="search-form rows">
+            <label class="input-group col-md-2">
+                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                <input type="text" class="form-control group" placeholder="搜索" aria-describedby="basic-addon1">
+            </label>
+            <label class="input-group col-md-2">
+                <input type="text" class="form-control" placeholder="输入CM完整的MAC地址">
+            </label>
+            <label class="input-group">
+                <button class="btn btn-primary">查询</button>
+            </label>
+            <label class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
+            </label>
+            <label class="input-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="slectedContnet glyphicon glyphicon-th-large"></span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="display: none;">
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#">50</a></li>
+                </ul>
+            </label>
+            <label class="input-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="slectedContnet glyphicon glyphicon-export"></span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="display: none;">
+                    <li><a href="#">导出为EXCEL</a></li>
+                    <li><a href="#">导出为另外的文件</a></li>
+                </ul>
+            </label>
+        </div>
+
+        <div class="grid-data">
+            <dl class="time-line-row">
+                <dt>
+                    <div class="time">
+                        <i>2019-07-16</i>
+                        <span>15:00:00</span>
+                    </div> 
+                    <b></b>
+                </dt>
+                <dd>
+                    <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                </dd>
+            </dl>
+            <dl class="time-line-row">
+                <dt>
+                    <div class="time">
+                        <i>2019-07-16</i>
+                        <span>15:00:00</span>
+                    </div> 
+                    <b></b>
+                </dt>
+                <dd>
+                    <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded， canvas rgba rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loadedbackgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                </dd>
+            </dl>
+            <dl class="time-line-row">
+                    <dt>
+                        <div class="time">
+                            <i>2019-07-16</i>
+                            <span>15:00:00</span>
+                        </div> 
+                        <b></b>
+                    </dt>
+                    <dd>
+                        <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                    </dd>
+                </dl>
+                <dl class="time-line-row">
+                    <dt>
+                        <div class="time">
+                            <i>2019-07-16</i>
+                            <span>15:00:00</span>
+                        </div> 
+                        <b></b>
+                    </dt>
+                    <dd>
+                        <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded， canvas rgba rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loadedbackgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                    </dd>
+                </dl>
+                <dl class="time-line-row">
+                        <dt>
+                            <div class="time">
+                                <i>2019-07-16</i>
+                                <span>15:00:00</span>
+                            </div> 
+                            <b></b>
+                        </dt>
+                        <dd>
+                            <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                        </dd>
+                    </dl>
+                    <dl class="time-line-row">
+                        <dt>
+                            <div class="time">
+                                <i>2019-07-16</i>
+                                <span>15:00:00</span>
+                            </div> 
+                            <b></b>
+                        </dt>
+                        <dd>
+                            <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded， canvas rgba rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loadedbackgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                        </dd>
+                    </dl>
+                    <dl class="time-line-row">
+                            <dt>
+                                <div class="time">
+                                    <i>2019-07-16</i>
+                                    <span>15:00:00</span>
+                                </div> 
+                                <b></b>
+                            </dt>
+                            <dd>
+                                <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                            </dd>
+                        </dl>
+                        <dl class="time-line-row">
+                            <dt>
+                                <div class="time">
+                                    <i>2019-07-16</i>
+                                    <span>15:00:00</span>
+                                </div> 
+                                <b></b>
+                            </dt>
+                            <dd>
+                                <span>hbChromeExtInstalled js canvas rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded， canvas rgba rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loadedbackgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations cssgradients cssreflections csstransforms csstransforms3d csstransitions video svg hb-loaded</span>
+                            </dd>
+                        </dl>
+        </div>
+
+        <div class="pagination-info pagination-info-href">
+            <div class="right">
+                <sapan>最新记录</sapan>
+                <button class="btn">上一页</button>
+                <button class="btn">下一页</button>
+                <span>日志所在服务器：172.198.76.55</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        @2019珠海广电技术规划管理室
+    </footer>
+
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        (function (win, doc) {
+            function addEventListener() {
+                let dropDown = $('button.dropdown-toggle')
+                let searchBtn = $('.glyphicon-search')
+                dropDown.on('click', function (e) {
+                    let menu = $(e.currentTarget).siblings('ul')
+                    menu.get(0).style.display = 'block'
+                    e.stopPropagation()
+                })
+                searchBtn.on('click', function (e) {
+                    alert('do search event here')
+                })
+            }
+
+            function init() {
+                addEventListener()
+            }
+
+            doc.addEventListener('click', function () {
+                $('.dropdown ul').removeAttr('style')
+            })
+
+            doc.addEventListener('DOMContentLoaded', function () {
+                init()
+            })
+        })(window, document)
+
+    </script>
+</body>
+
+</html>
