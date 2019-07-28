@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="expires" content="0"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>综合运营管理系统</title>
+    <link rel="icon" href="assets/images/logo.ico" type="image/png">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <!--tableCss-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap_table/bootstrap-table.css" />
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap_table/bootstrap-table.min.css" />
+    <!--dateCss-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-datetimepicker.min.css" />
+    <!--validatorCss-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrapValidator/bootstrapValidator.css">
+    <!--editableCss-->
+    <link rel="stylesheet" href="assets/bootstrap/x_editable/bootstrap-editable.css">
+    <!--toastrCss-->
+    <link rel="stylesheet" href="assets/bootstrap/toastr/toastr.css">
+    <!--selectCSS-->
+    <link rel="stylesheet" href="assets/bootstrap/select/bootstrap-select.css">
+
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/frame.css" />
+    <link rel="stylesheet" href="style/page-index.css" />
+</head>
+
+<body>
+    <nav class="page-nav">
+        <ul class="menu">
+            <li title="系统操作"><a>系统操作</a></li>
+            <li title="网警IP落地查询"><a>网警IP落地查询</a></li>
+            <li title="释放IP操作"><a>释放IP操作</a></li>
+            <li title="CM日志查询">
+                CM日志查询 <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <ul class="sub">
+                    <li><a>CM日志查询1</a></li>
+                    <li><a>CM日志查询2</a></li>
+                    <li><a>CM日志查询3</a></li>
+                    <li><a>CM日志查询4</a></li>
+                </ul>
+            </li>
+            <li title="CNR各项实时状态">
+                CNR各项实时状态 <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <ul class="sub">
+                    <li><a>CNR各项实时状态1</a></li>
+                    <li><a>CNR各项实时状态2</a></li>
+                    <li><a>CNR各项实时状态3</a></li>
+                    <li><a>CNR各项实时状态4</a></li>
+                </ul>
+            </li>
+            <li title="地址池相关">
+                地址池相关 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="OLT相关操作">
+                OLT相关操作 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CASA RPD查询">
+                CASA RPD查询 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CNR主机管理与监控">
+                CNR主机管理与监控 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="路由与配置相关">
+                路由与配置相关 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+            <li title="CLASS查询与配置">
+                CLASS查询与配置 <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </li>
+        </ul>
+
+        <ul class="opts">
+            <li><a><span class="glyphicon glyphicon-log-out"></span></a></li>
+            <li><a><span class="glyphicon glyphicon-cog"></span> 用户管理</a></li>
+            <li><a><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-index-header">
+        <span>综合运营管理系统</span>
+        <i>你好，Admin系统管理员</i>
+    </header>
+
+    <section class="main-frame-index">
+        <div class="cell-x-3">
+            <div class="main-frame">
+                <p class="corner c-t-r"></p>
+                <p class="corner c-b-l"></p>
+                <p class="corner c-b-r"></p>
+            </div>
+            <header>
+                scope组剩余量
+            </header>
+            <section class="content" id="chart-scope-group-remain"></section>
+        </div>
+
+        <div class="cell-x-3">
+            <div class="main-frame">
+                <p class="corner c-t-r"></p>
+                <p class="corner c-b-l"></p>
+                <p class="corner c-b-r"></p>
+            </div>
+            <header>
+                此scopeIP数对比
+            </header>
+            <section class="content" id="chart-scope-ip-contrast"></section>
+        </div>
+
+        <div class="cell-x-3">
+            <div class="main-frame">
+                <p class="corner c-t-r"></p>
+                <p class="corner c-b-l"></p>
+                <p class="corner c-b-r"></p>
+            </div>
+            <header>
+                此scope剩余量
+            </header>
+            <section class="content" id="chart-scope-remain"></section>
+        </div>
+
+        <div class="cell-x-2">
+            <div class="main-frame first-child">
+                <p class="corner c-t-r"></p>
+                <p class="corner c-b-l"></p>
+                <p class="corner c-b-r"></p>
+            </div>
+            <header>
+                监控项目分析
+            </header>
+            <section class="content" id="chart-monitor-project"> </section>
+        </div>
+
+        <div class="cell-x-2">
+            <div class="main-frame last-child">
+                <p class="corner c-t-r"></p>
+                <p class="corner c-b-l"></p>
+                <p class="corner c-b-r"></p>
+            </div>
+            <header>
+                scope组使用量查询
+            </header>
+            <section class="content grid-data">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>客户端IP</th>
+                            <th>客户端MAC地址</th>
+                            <th>开始租约时间</th>
+                            <th>结束租约时间</th>
+                            <th>BOSS系统MAC地址</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10.20.30.50</td>
+                            <td>10.20.30.50</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>10.20.30.50</td>
+                        </tr>
+                        <tr>
+                            <td>10.20.30.50</td>
+                            <td>10.20.30.50</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>10.20.30.50</td>
+                        </tr>
+                        <tr>
+                            <td>10.20.30.50</td>
+                            <td>10.20.30.50</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>10.20.30.50</td>
+                        </tr>
+                        <tr>
+                            <td>10.20.30.50</td>
+                            <td>10.20.30.50</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>10.20.30.50</td>
+                        </tr>
+                        <tr>
+                            <td>10.20.30.50</td>
+                            <td>10.20.30.50</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>2019-01-20 13:00:00</td>
+                            <td>10.20.30.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        @2019珠海广电技术规划管理室
+    </footer>
+
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+    <script type="text/javascript">
+        (function (win, doc) {
+
+            function addEventListener() {}
+
+            function showChartForScopeGroupRemain() {
+                var cyc4Count = 9
+                var zhfcCount = 28
+                var zhhqCount = 32
+                var xccmtsCount = 40
+                var option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{b}<br/>{c}({d}%)",
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        confine: true
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        x: 'right',
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        data: ['CY-C4-dynamic&wifi-stb-2', 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan',
+                            'ZH-HQ-HOTRL-Gelin-EastBuiding', 'JX-CCMTS-dynamic&wifi-man-1'
+                        ]
+                    },
+                    color: ['#ff7300', '#01acfa', '#f84d7c', '#00f0ff'],
+                    series: [{
+                        name: 'scope组剩余量',
+                        type: 'pie',
+                        radius: ['35%', '50%'],
+                        center: ['32%', '60%'],
+                        label: {
+                            normal: {
+                                formatter: '{per|{d}%}',
+                                padding: [0, 7],
+                                rich: {
+                                    per: {
+                                        color: '#eee',
+                                        padding: [2, 4],
+                                        borderRadius: 2
+                                    }
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            shadowColor: 'rgba(127, 221, 255, 0.5)',
+                            shadowBlur: 10
+                        },
+                        data: [
+                            {
+                                value: cyc4Count,
+                                name: 'CY-C4-dynamic&wifi-stb-2'
+                            },
+                            {
+                                value: zhfcCount,
+                                name: 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan'
+                            },
+                            {
+                                value: zhhqCount,
+                                name: 'ZH-HQ-HOTRL-Gelin-EastBuiding'
+                            },
+                            {
+                                value: xccmtsCount,
+                                name: 'JX-CCMTS-dynamic&wifi-man-1'
+                            }
+                        ]
+                    }]
+                };
+
+                echarts.init(document.getElementById('chart-scope-group-remain')).setOption(option)
+            }
+
+            function showChartForScopeIpContrast() {
+                var option = {
+                    grid: {
+                        top: 10,
+                        bottom: 80
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a}<br/>{c}",
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        confine: true
+                    },
+                    legend: {
+                        orient: 'horizontal',
+                        align: 'left',
+                        x: 'right',
+                        bottom: 0,
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        data: ['CY-C4-dynamic&wifi-stb-2', 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan',
+                            'ZH-HQ-HOTRL-Gelin-EastBuiding', 'JX-CCMTS-dynamic&wifi-man-1'
+                        ]
+                    },
+                    // dataset: {
+                    //     source: [
+                    //         ['此scopeIP数对比', 'CY-C4-dynamic&wifi-stb-2',
+                    //             'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan', 'ZH-HQ-HOTRL-Gelin-EastBuiding',
+                    //             'JX-CCMTS-dynamic&wifi-man-1'
+                    //         ],
+                    //         ['总IP数', 20, 860, 100, 3000],
+                    //         ['已用IP数', 100, 900, 2000, 100]
+                    //     ]
+                    // },
+                    color: ['#ff7300', '#01acfa', '#f84d7c', '#00f0ff'],
+                    xAxis: {
+                        type: 'category',
+                        axisLine: {
+                            lineStyle: {
+                                color: "#dee2e5"
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: "#022b3f"
+                            }
+                        },
+                        data: ['总IP数', '已用IP数']
+                    },
+                    yAxis: {
+                        axisLine: {
+                            lineStyle: {
+                                color: "#dee2e5"
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: "#022b3f"
+                            }
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'CY-C4-dynamic&wifi-stb-2',
+                            type: 'bar',
+                            barMaxWidth: 15,
+                            data: [20, 100]
+                        },
+                        {
+                            name: 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan',
+                            type: 'bar',
+                            barMaxWidth: 15,
+                            data: [860, 900]
+                        },
+                        {
+                            name: 'ZH-HQ-HOTRL-Gelin-EastBuiding',
+                            type: 'bar',
+                            barMaxWidth: 15,
+                            data: [100, 2000]
+                        },
+                        {
+                            name: 'JX-CCMTS-dynamic&wifi-man-1',
+                            type: 'bar',
+                            barMaxWidth: 15,
+                            data: [3000, 2000]
+                        }
+                    ]
+                };
+
+                echarts.init(document.getElementById('chart-scope-ip-contrast')).setOption(option)
+            }
+
+            function showChartForScopeRemain() {
+                var cyc4Count = 9
+                var zhfcCount = 28
+                var zhhqCount = 32
+                var xccmtsCount = 40
+                var option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{b}<br/>{c}({d}%)",
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        confine: true
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        x: 'right',
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        data: ['CY-C4-dynamic&wifi-stb-2', 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan',
+                            'ZH-HQ-HOTRL-Gelin-EastBuiding', 'JX-CCMTS-dynamic&wifi-man-1'
+                        ]
+                    },
+                    color: ['#ff7300', '#01acfa', '#f84d7c', '#00f0ff'],
+                    series: [{
+                        name: 'scope组剩余量',
+                        type: 'pie',
+                        radius: ['35%', '50%'],
+                        center: ['32%', '60%'],
+                        label: {
+                            normal: {
+                                formatter: '{per|{d}%}',
+                                padding: [0, 7],
+                                rich: {
+                                    per: {
+                                        color: '#eee',
+                                        padding: [2, 4],
+                                        borderRadius: 2
+                                    }
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            shadowColor: 'rgba(127, 221, 255, 0.5)',
+                            shadowBlur: 10
+                        },
+                        data: [{
+                                value: cyc4Count,
+                                name: 'CY-C4-dynamic&wifi-stb-2'
+                            },
+                            {
+                                value: zhfcCount,
+                                name: 'ZH-FC-CCMTS-OLT-1-dynamic&wifi-wan'
+                            },
+                            {
+                                value: zhhqCount,
+                                name: 'ZH-HQ-HOTRL-Gelin-EastBuiding'
+                            },
+                            {
+                                value: xccmtsCount,
+                                name: 'JX-CCMTS-dynamic&wifi-man-1'
+                            }
+                        ]
+                    }]
+                };
+
+                echarts.init(document.getElementById('chart-scope-remain')).setOption(option)
+            }
+
+            function showChartForMonitor() {
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            label: {
+                                backgroundColor: '#6a7985'
+                            }
+                        }
+                    },
+                    legend: {
+                        orient: 'horizontal',
+                        x: 'right',
+                        right: 30,
+                        bottom: 0,
+                        textStyle: {
+                            color: '#dee2e5',
+                            fontSize: 10
+                        },
+                        data: ['监控项目总数', '运行正常', '运行异常']
+                    },
+                    grid: {
+                        left:  50,
+                        right: 50,
+                        bottom: 60,
+                        top: 30
+                    },
+                    color: ['#01acfa', '#f84d7c', '#00f0ff'],
+                    xAxis: {
+                        name: '时间',
+                        nameLocation: 'end',
+                        nameTextStyle: {
+                            color: '#596d7a'
+                        },
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                        axisLine: {
+                            lineStyle: {
+                                color: "#dee2e5"
+                            }
+                        }
+                    },
+                    yAxis: {
+                        name: '个数',
+                        nameLocation: 'end',
+                        nameTextStyle: {
+                            color: '#596d7a'
+                        },
+                        type: 'value',
+                        axisLine: {
+                            lineStyle: {
+                                color: "#dee2e5"
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: "#022b3f"
+                            }
+                        }
+                    },
+                    series: [
+                        {
+                            name: '监控项目总数',
+                            symbol: 'circle',
+                            type: 'line',
+                            stack: '总量',
+                            areaStyle: {},
+                            data: [470, 412, 501, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name: '运行正常',
+                            symbol: 'circle',
+                            type: 'line',
+                            stack: '总量',
+                            areaStyle: {},
+                            data: [220, 182, 191, 234, 290, 330, 310, 234, 290, 330, 310, 300]
+                        },
+                        {
+                            name: '运行异常',
+                            symbol: 'circle',
+                            type: 'line',
+                            stack: '总量',
+                            areaStyle: {},
+                            data: [150, 232, 201, 154, 190, 330, 410, 150, 232, 201, 154, 190]
+                        }
+                    ]
+                };
+
+                echarts.init(document.getElementById('chart-monitor-project')).setOption(option)
+            }
+
+            function init() {
+                addEventListener()
+                setTimeout(function () {
+                    showChartForScopeGroupRemain()
+                    showChartForScopeIpContrast()
+                    showChartForScopeRemain()
+                    showChartForMonitor()
+                }, 100)
+            }
+
+            doc.addEventListener('DOMContentLoaded', function () {
+                init()
+            })
+        })(window, document)
+
+    </script>
+</body>
+
+</html>

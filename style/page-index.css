@@ -1,0 +1,111 @@
+.page-index-header {
+    height: 73px;
+    background: transparent url(../assets/images/index-header-bg.png) center center no-repeat;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.page-index-header span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00f0ff;
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+.page-index-header i {
+    display: block;
+    font-style: normal;
+    color: #c0c8cd;
+    font-size: 12px;
+}
+
+.main-frame-index {
+    position: absolute;
+    top: 165px;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    overflow: auto;
+}
+
+.main-frame-index .cell-x-3 .main-frame {
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.main-frame-index .cell-x-3,
+.main-frame-index .cell-x-2 {
+    width: 32%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    height: 345px;
+}
+.main-frame-index .cell-x-3 .content, 
+.main-frame-index .cell-x-2 .content {
+    position: absolute;
+    z-index: 2;
+    top: 55px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+}
+.main-frame-index::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.main-frame-index header {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    height: 39px;
+    line-height: 45px;
+    width: 280px;
+    background: transparent url(../assets/images/index-item-header-bg.png) no-repeat;
+    color: #00f0ff;
+    font-size: 16px;
+    font-weight: bold;
+    text-indent: 15px;
+}
+.main-frame-index .cell-x-3:nth-of-type(1) .main-frame, .main-frame-index .cell-x-3:nth-of-type(3) .main-frame {
+    left: 1px;
+    right: 1px;
+}
+.main-frame-index .cell-x-3:nth-of-type(2) .content {
+    left: 35px;
+}
+.main-frame-index .cell-x-3:nth-of-type(2) {
+    width: 36%;
+}
+.main-frame-index .cell-x-3:nth-of-type(2) header {
+    left: 20px;
+}
+.main-frame-index .cell-x-3:nth-of-type(2) .main-frame {
+    left: 20px;
+    right: 20px;
+}
+
+.main-frame-index .cell-x-2 {
+    margin-top: 20px;
+    width: 50%;
+}
+.main-frame-index .cell-x-2 .main-frame {
+    top: 30px;
+    bottom: 0;
+}
+.main-frame-index .cell-x-2 .main-frame.first-child{
+    left: 1px;
+    right: 10px;
+}
+.main-frame-index .cell-x-2 .main-frame.last-child{
+    left: 10px;
+    right: 1px;
+}
+.main-frame-index .cell-x-2:last-child header {
+    left: 10px;
+}

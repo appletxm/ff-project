@@ -1,8 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Microsoft YaHei", "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+    font-family: "Microsoft YaHei", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -41,34 +41,43 @@ a:hover {
     font-weight: normal;
     font-size: 14px !important;
 }
+
 .btn-primary {
     background-color: #00f0ff;
     color: #010912;
     border: 1px solid #00f0ff;
 }
-.btn-primary:hover, .btn-primary:focus{
+
+.btn-primary:hover,
+.btn-primary:focus {
     border: 1px solid #00f0ff;
     background-color: #16d4e0;
     color: #010912;
 }
+
 .btn-default {
     border: 1px solid #00f0ff;
     box-shadow: inset 0 0 5px rgba(45, 82, 98);
     background-color: transparent;
     color: #00bbc7;
 }
-.btn-default:hover, .btn-default:focus, .btn-default:active {
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
     border: 1px solid #00f0ff;
     box-shadow: inset 0 0 10px rgba(45, 82, 98);
     background-color: transparent;
     color: #00bbc7;
 }
+
 .btn-group button {
     min-width: 80px;
     text-align: center;
 }
 
-input, .form-control {
+input,
+.form-control {
     background-color: #022034;
     border: 1px solid #43f5ff;
     background-color: transparent;
@@ -80,23 +89,34 @@ input, .form-control {
     line-height: 34px;
     padding: 0 10px;
 }
+
 .form-control.group {
     border-left: 0;
     padding-left: 0;
 }
-input:focus, .form-control:focus {
+
+input:focus,
+.form-control:focus {
     box-shadow: 0 0 0 #43f5ff, inset 0 0 5px #43f5ff;
 }
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: rgba(0, 240, 255, 0.4) !important;
 }
-::-moz-placeholder { /* Firefox 19+ */  
+
+::-moz-placeholder {
+    /* Firefox 19+ */
     color: rgba(0, 240, 255, 0.4) !important;
 }
-:-ms-input-placeholder { /* IE 10+ */ 
+
+:-ms-input-placeholder {
+    /* IE 10+ */
     color: rgba(0, 240, 255, 0.4) !important;
 }
-:-moz-placeholder { /* Firefox 18- */ 
+
+:-moz-placeholder {
+    /* Firefox 18- */
     color: rgba(0, 240, 255, 0.4) !important;
 }
 
@@ -109,6 +129,7 @@ input:focus, .form-control:focus {
     top: -7px;
     left: 3px;
 }
+
 .dropdown-menu {
     border: 1px solid #00f0fd;
     box-shadow: inset 0 0 10px rgba(69, 109, 121, 1);
@@ -119,15 +140,18 @@ input:focus, .form-control:focus {
     padding: 0;
     display: none;
 }
+
 .dropdown-menu li {
     font-size: 14px;
     color: #00f0fd;
 }
-.dropdown-menu li a:hover{
+
+.dropdown-menu li a:hover {
     background-color: #034a5c;
     color: #00f0fd;
 }
-.dropdown-menu li a{
+
+.dropdown-menu li a {
     display: block;
     padding: 8px 10px;
     color: #00f0fd;
@@ -135,4 +159,21 @@ input:focus, .form-control:focus {
 
 .red {
     color: #fd6760
+}
+
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #01121e;
+    border-radius: 5px;
+}
+
+/*定义滑块
+  内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #006a71;
 }

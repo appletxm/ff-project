@@ -98,28 +98,28 @@ nav.page-nav::after {
     right: 30px;
     left: 30px;
 }
-.main-frame .corner {
+.corner {
     width: 44px;
     height: 44px;
     position: absolute;
     background: transparent url(../assets/images/corner-big.png) no-repeat;
 }
-.main-frame .corner.c-t-l {
+.corner.c-t-l {
     background-position: 0 0;
     top: -2px;
     left: -2px;
 }
-.main-frame .corner.c-t-r {
+.corner.c-t-r {
     background-position: -44px 0;
     top: -2px;
     right: -2px;
 }
-.main-frame .corner.c-b-l {
+.corner.c-b-l {
     background-position: -88px 0;
     bottom: -12px;
     left: -2px;
 }
-.main-frame .corner.c-b-r {
+.corner.c-b-r {
     background-position: -132px 0;
     bottom: -12px;
     right: -2px;
