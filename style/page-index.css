@@ -3,6 +3,7 @@
     background: transparent url(../assets/images/index-header-bg.png) center center no-repeat;
     text-align: center;
     margin: 20px 0;
+    clear: both;
 }
 
 .page-index-header span {

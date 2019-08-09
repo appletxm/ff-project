@@ -226,8 +226,13 @@
                         confine: true
                     },
                     legend: {
+                        icon: 'rect',
+                        itemWidth: 15,
+                        itemHeight: 15,
                         orient: 'vertical',
-                        x: 'right',
+                        x: 'left',
+                        left: 'auto',
+                        right: -50,
                         textStyle: {
                             color: '#dee2e5',
                             fontSize: 10
@@ -299,9 +304,12 @@
                         confine: true
                     },
                     legend: {
+                        icon: 'rect',
+                        itemWidth: 15,
+                        itemHeight: 15,
+                        left: 10,
                         orient: 'horizontal',
                         align: 'left',
-                        x: 'right',
                         bottom: 0,
                         textStyle: {
                             color: '#dee2e5',
@@ -326,8 +334,11 @@
                         type: 'category',
                         axisLine: {
                             lineStyle: {
-                                color: "#dee2e5"
+                                color: "#017385"
                             }
+                        },
+                        axisLabel: {
+                            color: '#dee2e5'
                         },
                         splitLine: {
                             lineStyle: {
@@ -339,8 +350,11 @@
                     yAxis: {
                         axisLine: {
                             lineStyle: {
-                                color: "#dee2e5"
+                                color: "#017385"
                             }
+                        },
+                        axisLabel: {
+                            color: '#dee2e5'
                         },
                         splitLine: {
                             lineStyle: {
@@ -463,6 +477,9 @@
                         }
                     },
                     legend: {
+                        icon: 'rect',
+                        itemWidth: 15,
+                        itemHeight: 15,
                         orient: 'horizontal',
                         x: 'right',
                         right: 30,
@@ -479,7 +496,7 @@
                         bottom: 60,
                         top: 30
                     },
-                    color: ['#01acfa', '#f84d7c', '#00f0ff'],
+                    color: ['#01acfa', '#00f0ff', '#f84d7c'],
                     xAxis: {
                         name: '时间',
                         nameLocation: 'end',
@@ -491,8 +508,11 @@
                         data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
                         axisLine: {
                             lineStyle: {
-                                color: "#dee2e5"
+                                color: "#017385"
                             }
+                        },
+                        axisLabel: {
+                            color: '#dee2e5'
                         }
                     },
                     yAxis: {
@@ -504,8 +524,11 @@
                         type: 'value',
                         axisLine: {
                             lineStyle: {
-                                color: "#dee2e5"
+                                color: "#017385"
                             }
+                        },
+                        axisLabel: {
+                            color: '#dee2e5'
                         },
                         splitLine: {
                             lineStyle: {
@@ -521,7 +544,33 @@
                             type: 'line',
                             stack: '总量',
                             areaStyle: {},
-                            data: [470, 412, 501, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+                            symbol:'none',
+                            data: [470, 412, 501, 134, 90, 230, 210, 101, 134, 90, 230, 210],
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default',
+                                        color: {
+                                            type: 'linear',
+                                            x: 0,
+                                            y: 0,
+                                            x2: 0,
+                                            y2: 1,
+                                            colorStops: [
+                                                {
+                                                offset: 0, color: 'rgba(1, 172, 250, 0.4)'
+                                            }, {
+                                                offset: 1, color: 'rgba(1, 172, 250, 0)'
+                                            }],
+                                            global: false
+                                        }
+                                    }
+                                }
+                            },
+                            lineStyle: {
+                                width: 1,
+                                color: '#01acfa'
+                            }
                         },
                         {
                             name: '运行正常',
@@ -530,7 +579,34 @@
                             type: 'line',
                             stack: '总量',
                             areaStyle: {},
-                            data: [220, 182, 191, 234, 290, 330, 310, 234, 290, 330, 310, 300]
+                            symbol:'none',
+                            data: [220, 182, 191, 234, 290, 330, 310, 234, 290, 330, 310, 300],
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default',
+                                        color: {
+                                            type: 'linear',
+                                            x: 0,
+                                            y: 0,
+                                            x2: 0,
+                                            y2: 1,
+                                            colorStops: [
+                                            {
+                                                offset: 0, color: 'rgba(0, 240, 255, 0.4)'
+                                            }, {
+                                                offset: 1, color: 'rgba(0, 240, 255, 0)'
+                                            }],
+                                            global: false
+                                        }
+                                    }
+                                }
+                            },
+                            
+                            lineStyle: {
+                                width: 1,
+                                color: '#00f0ff',
+                            }
                         },
                         {
                             name: '运行异常',
@@ -539,7 +615,34 @@
                             type: 'line',
                             stack: '总量',
                             areaStyle: {},
-                            data: [150, 232, 201, 154, 190, 330, 410, 150, 232, 201, 154, 190]
+                            symbol:'none',
+                            data: [150, 232, 201, 154, 190, 330, 410, 150, 232, 201, 154, 190],
+                            
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default',
+                                        color: {
+                                            type: 'linear',
+                                            x: 0,
+                                            y: 0,
+                                            x2: 0,
+                                            y2: 1,
+                                            colorStops: [
+                                                {
+                                                offset: 0, color: 'rgba(248, 77, 124, 0.4)'
+                                            }, {
+                                                offset: 1, color: 'rgba(248, 77, 124, 0)'
+                                            }],
+                                            global: false
+                                        }
+                                    }
+                                }
+                            },
+                            lineStyle: {
+                                width: 1,
+                                color: '#f84d7c'
+                            }
                         }
                     ]
                 };

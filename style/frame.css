@@ -35,6 +35,9 @@ nav.page-nav::after {
     color: #00f0ff;
     text-decoration: none;
     display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
 }
 .page-nav ul.menu .glyphicon {
     vertical-align: middle;
@@ -47,6 +50,7 @@ nav.page-nav::after {
 }
 .page-nav ul.menu li {
     position: relative;
+    display: inline-block;
 }
 .page-nav ul.menu li:hover {
     background-color: #024a5d;
